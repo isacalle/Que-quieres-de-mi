@@ -1,3 +1,4 @@
+/*
 //funcion simple
 function saludar(nombre) {
     console.log("nombre de usuario: " + nombre);
@@ -108,4 +109,4 @@ console.log("El total de la compra es: " + totalCompra + " dlrs");
 alert("El total de tu compra es de: " + totalCompra + " dlrs");
 
 
-
+*/

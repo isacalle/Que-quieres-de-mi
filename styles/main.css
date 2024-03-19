@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500&display=swap");
+* {
+  margin: 3px;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  align-items: center;
+}
+
+.navbar{
+    font-size: 20px;
+    text-align: right;
+}
+.carrito{
+    padding-top: 0;
+}
+.hr{
+    background-color:#FFC971;
+    border-color: #FFC971;
+
+} 
+.titulos{
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+.subtitulos{
+    font-size: 25px;
+    padding:20px;
+    text-align: left;
+
+}
+
+.cajita__productos{
+    display: inline-block;
+    width: 22%;
+    background-color: #fae5e9;
+    padding: 10px;
+    margin-block: 13px;
+    border-radius: 5px;
+    margin-inline: 1%;
+    align-items: center;
+
+}
+.cajita__imagen {
+    width: 275px;
+    height: 340px;
+    padding-top: 10px;
+    margin: 0; /* Esto centra horizontalmente la caja de imagen */
+    ;
+}
+
+.subtitulo__productos {
+    text-transform: uppercase;
+    text-align: center;
+}
+.boton{
+    padding: 8px;
+    background-color: white;
+    border-color: #FF7096;
+}
