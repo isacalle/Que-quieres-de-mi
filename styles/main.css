@@ -1,37 +1,47 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@200;300;400;500&display=swap");
+
 * {
-  margin: 3px;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  align-items: center;
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    align-items: center;
 }
 
-.navbar{
+.navbar {
     font-size: 20px;
     text-align: right;
 }
-.carrito{
-    padding-top: 0;
+
+.carrito {
+    width: 3%;
+    margin: 5px;
+    margin-bottom: 0%;
+    padding: 0%;
 }
-.hr{
-    background-color:#FFC971;
+
+.hr {
+    background-color: #FFC971;
     border-color: #FFC971;
 
-} 
-.titulos{
+}
+
+.titulos {
     font-size: 20px;
     padding: 20px;
     text-align: center;
 }
-.subtitulos{
+
+.subtitulos {
     font-size: 25px;
-    padding:20px;
+    padding: 20px;
     text-align: left;
 
 }
 
-.cajita__productos{
+
+
+.cajita__productos {
     display: inline-block;
     width: 22%;
     background-color: #fae5e9;
@@ -42,20 +52,63 @@
     align-items: center;
 
 }
+
 .cajita__imagen {
     width: 275px;
     height: 340px;
     padding-top: 10px;
-    margin: 0; /* Esto centra horizontalmente la caja de imagen */
-    ;
+    margin: 0;
+
 }
 
 .subtitulo__productos {
     text-transform: uppercase;
     text-align: center;
 }
-.boton{
+
+.boton {
     padding: 8px;
     background-color: white;
     border-color: #FF7096;
+}
+
+/*formulario*/
+.headerFormulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tituloFormulario {
+    margin: 3%;
+}
+
+.main__contacto .container {
+    text-align: center;
+    justify-content: center;
+}
+
+.main__contacto .container .nombre {
+    width: 30%;
+    background-color: rgb(249, 231, 232);
+}
+
+.main__contacto .container .contrasenia {
+    width: 30%;
+    background-color: rgb(249, 231, 232);
+}
+
+.main__contacto .container .boton {
+    margin-block: 15px;
+}
+
+/*registro*/
+.main__contacto .container .email {
+    width: 30%;
+    background-color: rgb(249, 231, 232);
+}
+
+.main__contacto .container .usuario {
+    width: 30%;
+    background-color: rgb(249, 231, 232);
 }
