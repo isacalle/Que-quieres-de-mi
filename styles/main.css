@@ -40,8 +40,7 @@
 }
 
 
-
-.cajita__productos {
+.cajita__productos .producto {
     display: inline-block;
     width: 22%;
     background-color: #fae5e9;
@@ -50,9 +49,9 @@
     border-radius: 5px;
     margin-inline: 1%;
     align-items: center;
+    
 
 }
-
 .cajita__imagen {
     width: 275px;
     height: 340px;
@@ -71,6 +70,12 @@
     background-color: white;
     border-color: #FF7096;
 }
+.botonbuscador{
+    padding: 8px;
+    background-color: white;
+    border-color: #FF7096;
+}
+
 
 /*formulario*/
 .headerFormulario {
