@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/Logo horizontal - Que quieres de mi !.png" type="image/x-icon">
+    <title>Carrito de compra</title>
+    <link rel="stylesheet" href="../styles/main.css">
+</head>
+
+<body>
+    <header class="header">
+
+        <img src="../img/Logo horizontal - Que quieres de mi !.png" alt="Logo marca" width="15%">
+        <hr class="hr">
+
+    </header>
+    <main>
+        <div class="regreso">
+            <a href="./productos.html">
+                < Seguir comprando</a>
+        </div>
+
+        <section id="bolsa">
+
+            <!-- BOLSA -->
+            <h1 class="titulos">BOLSA DE COMPRAS </h1>
+
+            <div id="bolsa-productos" class="bolsa-productos">
+                <p id="bolsa-vacia" class="bolsa-vacia">El carrito esta vacio</p>
+
+                <!--SE COMPLETA CON JS-->
+
+            </div>
+
+            <div id="bolsa-acciones" class="bolsa-acciones">
+                <div class="bolsa-acciones1">
+                    <button id="vaciar-bolsa" class="vaciar-bolsa">Vaciar Bolsa</button>
+                </div>
+                <div class="bolsa-acciones2">
+                    <div class="bolsa-total">
+                        <h1>Total:</h1>
+                        <h3 id="total">$30</h3>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="main__contacto">
+            <div class="container">
+
+
+                <form id="formulario-compra" class="formulario-registro">
+
+                    <h2 class="tituloFormulario">DATOS DE ENVIO</h2>
+
+                    <div class="texto__contacto">
+
+                        <select name="" class="select">
+                            <option disabled="disabled" selected="selected" required="required">> seleccione
+                                Ciudad:</option>
+                            <option>Quito</option>
+                        </select>
+                    </div>
+
+
+                    <div class="texto__contacto">
+                        <label for="direccion">Dirección:
+                    </div>
+                    <input type="text" id="direccion" class="direccion" required="required">
+
+                    <div class="texto__contacto">
+                        <label for="nombre">Nombre de quien recibe:
+                    </div>
+                    <input type="text" id="nombre-recibe" class="nombre" required="required">
+
+                    <div class="texto__contacto">
+                        <label for="cedula">Número de cédula de quien recibe:
+                    </div>
+                    <input type="text" id="cedula-recibe" class="cedula" required="required"
+                    minlength="10" maxlength="10">
+
+
+
+                    <h2 class="tituloFormulario">METODO DE PAGO</h2>
+                    <section>
+                        <img src="../img/visa.png" class="imagenes__pago" alt="icono visa">
+                        <img src="../img/tarjeta.png" class="imagenes__pago" alt="icono mastercard">
+                        <img src="../img/american-express.png" class="imagenes__pago" alt="icono american">
+                        <img src="../img/tarjeta-de-credito.png" class="imagenes__pago" alt="icono tarjeta1">
+                    </section>
+
+                    <div class="texto__contacto">
+                        <label for="tarjeta">Número que aparece en la tarjeta:
+                    </div>
+                    <input type="text" id="tarjeta" class="tarjeta" required="required" minlength="14" maxlength="16">
+
+
+                    <div class="texto__contacto">
+                        <label for="nombre">Nombre tal como aparece en la tarjeta
+                    </div>
+                    <input type="text" id="nombre-tarjeta" class="nombre" required="required">
+
+
+                    <div class="texto__contacto">
+                        <label for="seguridad">Codigo de seguridad:
+                    </div>
+                    <input type="text" id="codigo-sec" class="seguridad" required="required" minlength="3" maxlength="3">
+                    <br>
+<button id="finalizar-compra" class="boton" type="submit"> FINALIZAR COMPRA </button>
+
+                </form>
+            </div>
+
+        </section>
+
+
+
+    </main>
+
+    <footer>
+
+    </footer>
+    <script src="../js/bolsa.js "></script>
+</body>
+
+</html>

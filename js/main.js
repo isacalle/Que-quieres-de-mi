@@ -116,6 +116,7 @@ const productos = [
 
 //funcion para mostrar los productos 
 const cajitaProductos = document.querySelector("#cajita__productos");
+let botones= document.querySelectorAll(".boton");
 
 
 function cargarProductos() {
@@ -128,12 +129,51 @@ function cargarProductos() {
     <h5 class="subtitulo__productos">${producto.titulo}</h5>
     <p class="producto__precio">$${producto.precio}</p>
     <button class="boton" id="${producto.id}" type="submit">Añadir a la compra</button>
-    `; 
-    cajitaProductos.append(div);
+    `;
+        cajitaProductos.append(div);
 
     })
+    botonesAgregar();
+    
 }
 
 cargarProductos();
 
-    
+//funcion para que los botones se reflejen
+function botonesAgregar (){
+    botones= document.querySelectorAll(".boton");
+
+    botones.forEach(boton =>{
+        boton.addEventListener("click", agregarBolsa);
+    });
+}
+
+
+let productosBolsa;
+let productosBolsaLS =localStorage.getItem("productos-en-bolsa");
+if (productosBolsaLS){
+    productosBolsa = JSON.parse(productosBolsaLS);
+} else {
+productosBolsa= [];
+}
+
+
+//funcion para cargar a la bolsa de productos los seleccionados 
+function agregarBolsa(e) {
+
+const idBoton = e.currentTarget.id;
+const productoAdd= productos.find(producto => producto.id === idBoton);
+
+if (productosBolsa.some(producto => producto.id === idBoton)){
+   const index= productosBolsa.findIndex(producto => producto.id === idBoton);
+   productosBolsa[index].cantidad++;
+}else{
+    productoAdd.cantidad = 1;
+     productosBolsa.push(productoAdd);   
+    }
+    localStorage.setItem("productos-en-bolsa", JSON.stringify(productosBolsa));
+}
+
+
+
+
