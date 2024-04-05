@@ -215,3 +215,7 @@ display: flex;
     background-color: white;
     border-color: #FF7096;
 }
+
+.swal2-container{
+    background-color: #fae5e9;
+}

@@ -17,7 +17,7 @@ function cargarProductosBolsa() {
 
         contBolsaProductos.classList.remove("disabled");
         contBolsaAcciones.classList.remove("disabled");
-        
+
 
 
         contBolsaProductos.innerHTML = "";
@@ -51,10 +51,10 @@ function cargarProductosBolsa() {
         })
 
     } else {
-        
+
         contBolsaProductos.classList.add("disabled");
         contBolsaAcciones.classList.add("disabled");
-        
+
 
     }
     actualizarTotal();
@@ -66,6 +66,7 @@ cargarProductosBolsa();
 
 botonVaciar.addEventListener("click", vaciarBolsa);
 function vaciarBolsa() {
+    alert("Se borraron los productos de tu bolsa :(");
 
     productosBolsa.length = 0;
     localStorage.setItem("productos-en-bolsa", JSON.stringify(productosBolsa));
@@ -82,9 +83,9 @@ function actualizarTotal() {
 //formulario de datos de envio y metodo de pago 
 
 const formularioCompra = document.querySelector("#formulario-compra");
-formularioCompra.addEventListener("submit", (e)=> {
+formularioCompra.addEventListener("submit", (e) => {
     e.preventDefault()
-    const direccion = document.querySelector("#direccion").value 
+    const direccion = document.querySelector("#direccion").value
     const nombreRecibe = document.querySelector("#nombre-recibe").value
     const cedulaRecibe = document.querySelector("#cedula-recibe").value
     const tarjeta = document.querySelector("#tarjeta").value
@@ -93,28 +94,26 @@ formularioCompra.addEventListener("submit", (e)=> {
 
     const Datos = JSON.parse(localStorage.getItem('datos')) || []
     const datosRegistrados = Datos.find(direccion => direccion.tarjeta === tarjeta);
-    if (datosRegistrados){
-        return alert("¡Gracias por tu compra!");
+    if (datosRegistrados) {
+    
     }
-    Datos.push({direccion: direccion, nombreRecibe: nombreRecibe, cedulaRecibe: cedulaRecibe, tarjeta: tarjeta, nombreTarjeta: nombreTarjeta, codigo:codigo});
+    Datos.push({ direccion: direccion, nombreRecibe: nombreRecibe, cedulaRecibe: cedulaRecibe, tarjeta: tarjeta, nombreTarjeta: nombreTarjeta, codigo: codigo });
     localStorage.setItem("datos", JSON.stringify(Datos));
-    alert("¡Gracias por tu compra!");
-    window.location.href='productos.html'
+    window.location.href = 'productos.html';
 
 })
 
 //funcion para que al hacer click en el boton de finalizar compra se eliminen los productos de la bolsa
 botonComprar.addEventListener("click", comprarBolsa);
 function comprarBolsa() {
-
+        
     productosBolsa.length = 0;
     localStorage.setItem("productos-en-bolsa", JSON.stringify(productosBolsa));
-    
+
     contBolsaProductos.classList.add("disabled");
     contBolsaAcciones.classList.add("disabled");
 
 }
-
 
 
 
